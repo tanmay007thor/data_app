@@ -1,0 +1,39 @@
+/* Apply basic styles to the nav element and its child ul and li elements */
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin: 0 1rem;
+}
+
+/* Apply responsive styles using media queries */
+@media screen and (max-width: 768px) {
+  /* On screens smaller than 768px, change the flex direction of the nav and hide the list bullets */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .nav li::before {
+    content: none;
+  }
+}
